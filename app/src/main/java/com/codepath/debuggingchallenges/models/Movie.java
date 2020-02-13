@@ -33,7 +33,9 @@ public class Movie {
         ArrayList<Movie> results = new ArrayList<>();
         for (int i = 0; i < jsonArray.length(); i++) {
             try {
-                results.add(new Movie(jsonArray.getJSONObject(i)));
+                Movie mv = new Movie(jsonArray.getJSONObject(i));
+                results.add(mv);
+                //results.add(new Movie(jsonArray.getJSONObject(i)));
             } catch (JSONException e) {
                 e.printStackTrace();
             }
